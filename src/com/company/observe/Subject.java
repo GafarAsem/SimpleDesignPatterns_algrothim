@@ -9,4 +9,6 @@ public interface Subject {
     public void addFollowing(User user);
     public void removeFollowing(User user);
 
+    public void notifyUsers(Post post);
+
 }

@@ -79,5 +79,13 @@ public class User implements Subject{
         followers.remove(user);
     }
 
+    @Override
+    public void notifyUsers(Post post) {
+        for(User user:followers){
+            System.out.println(user.getUserID()+":"+this.getUserID()+" add new post ");
+            System.out.println("title : "+post.title);
+        }
+    }
+
 
 }

@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.observe.Post;
 import com.company.observe.User;
 import com.company.singlet.Singleton;
 
@@ -16,10 +17,18 @@ public class Main {
         Singleton singleton1=Singleton.getInstance();
         Singleton singleton2=Singleton.getInstance();
 ///////////////////////////////////////////////////////////
-        User user1=new User("userid1","name1","email@example.com");
-        User user2=new User("userid2","name2","email@example.com");
-        user2.addFollow(user1);//example of observer disgn pattern
+        User user1=new User("userid1","name1","email1@example.com");
+        User user2=new User("userid2","name2","email2@example.com");
+        User user3=new User("userid3","name3","email3@example.com");
+        user2.addFollow(user1);  //example of observer disgn pattern
+        user2.addFollow(user3);
+        user3.addFollow(user1);
+        Post post1=new Post(1,user1,"Hello"," ");
+        Post post2=new Post(1,user3,"mmm"," ");
+
+
         ////////////////////////////////////////
+
 
 
 
