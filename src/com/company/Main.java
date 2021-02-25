@@ -64,6 +64,27 @@ public class Main {
 
     }
 
+    public static ArrayList<Integer> getCoin(int money) {
+
+        ArrayList<Integer> typeMoney = new ArrayList<>(Arrays.asList(500, 100, 50, 10, 5, 1));
+        ArrayList<Integer> newMoney = new ArrayList<>();
+
+        for (int i = 0; i < typeMoney.size(); i++) {
+            while (true) {
+                if (money != 0 && money > 0 && money >= typeMoney.get(i)) {
+                    if (money - typeMoney.get(i) >= 0) {
+                        money = money - typeMoney.get(i);
+                        newMoney.add(typeMoney.get(i));
+                    }
+
+                } else break;
+            }
+        }
+        return newMoney;
+
+
+    }
+
     static void n() {
         ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(34, 32, 62, 14, 53));
         ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(256, 2754, 33, 77, 44));
